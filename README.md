@@ -4,6 +4,9 @@
     <a href="https://osrx.loverinsyach.site">
         osrx.loverinsyach.site
     </a>
+    <br/>
+    <br/>
+    <br/>
 </div>
 
 inspect, edit, and rewrite osu! replay metadata directly in your browser.
