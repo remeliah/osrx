@@ -1,0 +1,15 @@
+server {
+    listen 80;
+
+    location /health {
+        proxy_pass http://api:${API_PORT};
+    }
+
+    location /api/ {
+        proxy_pass http://api:${API_PORT};
+    }
+
+    location / {
+        proxy_pass http://web:${WEB_PORT};
+    }
+}

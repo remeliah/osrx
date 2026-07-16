@@ -1,0 +1,6 @@
+target
+**/node_modules
+**/.svelte-kit
+web/build
+*.osr
+.env

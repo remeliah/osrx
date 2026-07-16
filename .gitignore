@@ -1,0 +1,9 @@
+/target
+node_modules
+.svelte-kit
+build
+.env
+.env.*
+!.env.example
+vite.config.ts.timestamp*
+*.osr
