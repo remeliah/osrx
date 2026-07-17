@@ -549,33 +549,35 @@
   </div>
 {/if}
 
-<footer class="footer" data-reveal>
-  <div class="footer-ornament" aria-hidden="true">
-    <svg viewBox="0 0 300 20" fill="none" preserveAspectRatio="none" class="footer-graph">
-      <line x1="0" y1="10" x2="300" y2="10" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
-      <polyline points="0,14 15,12 30,16 45,8 60,13 75,7 90,15 105,10 120,14 135,6 150,13 165,11 180,8 195,15 210,9 225,12 240,7 255,13 270,10 285,6 300,14" stroke="currentColor" stroke-width="0.5" opacity="0.25" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="150" cy="10" r="1.5" fill="currentColor" opacity="0.25"/>
-      <circle cx="45" cy="8" r="1" fill="currentColor" opacity="0.15"/>
-    </svg>
-  </div>
-  <div class="line-art line-art--footer" aria-hidden="true">
-    <svg viewBox="0 0 1060 60" fill="none" preserveAspectRatio="none">
-      <path class="la-path" d="M-20 30 Q200 -10 530 20 T1080 30" stroke="currentColor" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
-      <path class="la-path" d="M100 40 Q350 10 530 30 T1000 40" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" opacity="0.4" vector-effect="non-scaling-stroke"/>
-      <circle cx="530" cy="20" r="2.5" fill="currentColor" opacity="0.25"/>
-    </svg>
-  </div>
-  <hr class="footer-rule breathing-border" aria-hidden="true" />
-  <p class="footer-line mono muted">
-    osrx &middot; replay metadata editor &middot;
-    <a href="https://github.com/remeliah/osrx" class="footer-gh-link" target="_blank" rel="noopener noreferrer">
-      <svg class="footer-gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-        <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.64 7.64 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+{#if !replay}
+  <footer class="footer" data-reveal>
+    <div class="footer-ornament" aria-hidden="true">
+      <svg viewBox="0 0 300 20" fill="none" preserveAspectRatio="none" class="footer-graph">
+        <line x1="0" y1="10" x2="300" y2="10" stroke="currentColor" stroke-width="0.4" opacity="0.3"/>
+        <polyline points="0,14 15,12 30,16 45,8 60,13 75,7 90,15 105,10 120,14 135,6 150,13 165,11 180,8 195,15 210,9 225,12 240,7 255,13 270,10 285,6 300,14" stroke="currentColor" stroke-width="0.5" opacity="0.25" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="150" cy="10" r="1.5" fill="currentColor" opacity="0.25"/>
+        <circle cx="45" cy="8" r="1" fill="currentColor" opacity="0.15"/>
       </svg>
-      remeliah/osrx
-    </a>
-  </p>
-</footer>
+    </div>
+    <div class="line-art line-art--footer" aria-hidden="true">
+      <svg viewBox="0 0 1060 60" fill="none" preserveAspectRatio="none">
+        <path class="la-path" d="M-20 30 Q200 -10 530 20 T1080 30" stroke="currentColor" stroke-width="1" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+        <path class="la-path" d="M100 40 Q350 10 530 30 T1000 40" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" opacity="0.4" vector-effect="non-scaling-stroke"/>
+        <circle cx="530" cy="20" r="2.5" fill="currentColor" opacity="0.25"/>
+      </svg>
+    </div>
+    <hr class="footer-rule breathing-border" aria-hidden="true" />
+    <p class="footer-line mono muted">
+      osrx &middot; replay metadata editor &middot;
+      <a href="https://github.com/remeliah/osrx" class="footer-gh-link" target="_blank" rel="noopener noreferrer">
+        <svg class="footer-gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.64 7.64 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        remeliah/osrx
+      </a>
+    </p>
+  </footer>
+{/if}
 
 <style>
   .bg-ambient {

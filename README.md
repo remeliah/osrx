@@ -50,7 +50,7 @@ cd web && npm run dev          # web on :3000 (proxies /api to :3001)
 
 ```mermaid
 graph LR
-    browser[browser] --> nginx[nginx :9082]
+    browser[browser] --> nginx[nginx]
     nginx --> |/api/*| api[api<br/>rust/Axum]
     nginx --> |/*| web[web<br/>sveltekit/Node]
 ```
