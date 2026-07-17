@@ -1,7 +1,7 @@
 <script lang="ts">
   import { MOD_GROUPS, MOD_LABELS, hasMod, toggleMod, modIcon } from '$lib/mods';
 
-  let { mods = $bindable(0), disabled = false }: { mods: number, disabled?: boolean } = $props();
+  let { mods = $bindable(0), disabled = false }: { mods: number; disabled?: boolean } = $props();
 </script>
 
 <div class="mod-selector" class:disabled>
@@ -32,9 +32,9 @@
 
 <style>
   .mod-selector {
-    display:        flex;
+    display: flex;
     flex-direction: column;
-    gap:            var(--space-lg);
+    gap: var(--space-lg);
   }
 
   .mod-selector.disabled {
@@ -42,52 +42,56 @@
   }
 
   .mod-group {
-    display:        flex;
+    display: flex;
     flex-direction: column;
-    gap:            var(--space-xs);
+    gap: var(--space-xs);
   }
 
   .group-label {
-    font-size:      var(--text-xs);
+    font-size: var(--text-xs);
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .mod-pills {
-    display:   flex;
+    display: flex;
     flex-wrap: wrap;
-    gap:       var(--space-xs);
+    gap: var(--space-xs);
   }
 
   @keyframes shimmer {
-    0% { background-position: -200% center; }
-    100% { background-position: 200% center; }
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
   }
 
   .mod-pill {
-    display:         inline-flex;
-    align-items:     center;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap:             4px;
-    height:          28px;
-    padding:         0 var(--space-sm);
-    font-family:     var(--font-mono);
-    font-size:       var(--text-xs);
-    font-weight:     500;
-    border-radius:   var(--radius-pill);
-    border:          1px solid var(--color-rule);
-    background:      var(--color-paper);
-    color:           var(--color-neutral);
-    cursor:          pointer;
-    white-space:     nowrap;
-    position:        relative;
-    overflow:        hidden;
+    gap: 4px;
+    height: 28px;
+    padding: 0 var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    font-weight: 500;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-rule);
+    background: var(--color-paper);
+    color: var(--color-neutral);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
     transition:
-      background  var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
-      color       var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
+      background var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
+      color var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
       border-color var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
-      transform   var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
-      box-shadow  var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1);
+      transform var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow var(--dur-micro) cubic-bezier(0.16, 1, 0.3, 1);
     user-select: none;
   }
 
@@ -109,7 +113,7 @@
 
   .mod-pill:hover:not(:disabled) {
     border-color: var(--color-accent-dim);
-    color:        var(--color-ink);
+    color: var(--color-ink);
     transform: translateY(-1px);
   }
 
@@ -123,22 +127,24 @@
   }
 
   .mod-pill.active {
-    background:   var(--color-accent);
+    background: var(--color-accent);
     border-color: var(--color-accent);
-    color:        oklch(98% 0.01 46);
+    color: oklch(98% 0.01 46);
     box-shadow: 0 2px 8px oklch(0% 0 0 / 0.1);
   }
 
   .mod-pill.active:hover:not(:disabled) {
-    background:   var(--color-accent-dim);
+    background: var(--color-accent-dim);
     border-color: var(--color-accent-dim);
     box-shadow: 0 4px 12px oklch(0% 0 0 / 0.15);
   }
 
-  .mod-pill:disabled { cursor: not-allowed; }
+  .mod-pill:disabled {
+    cursor: not-allowed;
+  }
 
   .mod-icon {
-    width:  16px;
+    width: 16px;
     height: 16px;
     flex-shrink: 0;
     filter: brightness(0.25);

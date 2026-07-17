@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => {
     server: {
       web_port,
       proxy: {
-        '/api':    { target: `http://localhost:${apiPort}`, changeOrigin: true },
+        '/api': { target: `http://localhost:${apiPort}`, changeOrigin: true },
         '/health': { target: `http://localhost:${apiPort}`, changeOrigin: true },
       },
     },

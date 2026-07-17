@@ -4,7 +4,7 @@ setup:
 	cp -n .env.example .env
 
 dev:
-	cargo run -p osrx-api & cd web && npm run dev
+	cargo run -p osrx-api & cd web && bun run dev
 
 build:
 	docker compose build

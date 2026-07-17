@@ -1,6 +1,9 @@
 .bg-ambient {
-  position: fixed; inset: 0; z-index: 0;
-  pointer-events: none; overflow: hidden;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .bg-gradient {
@@ -12,22 +15,27 @@
 }
 
 .bg-gradient--1 {
-  width: 600px; height: 600px;
+  width: 600px;
+  height: 600px;
   background: oklch(92% 0.06 46);
-  top: -15%; left: -10%;
+  top: -15%;
+  left: -10%;
   animation-delay: 0s;
 }
 
 .bg-gradient--2 {
-  width: 500px; height: 500px;
+  width: 500px;
+  height: 500px;
   background: oklch(94% 0.04 80);
-  bottom: -10%; right: -5%;
+  bottom: -10%;
+  right: -5%;
   animation-delay: -8s;
   animation-duration: 24s;
 }
 
 .bg-grain {
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   opacity: 0.03;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
   background-repeat: repeat;
@@ -35,13 +43,19 @@
 }
 
 .ornament-system {
-  position: absolute; inset: 0; z-index: 0;
-  pointer-events: none; overflow: visible;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
 }
 
 .graphic-accents {
-  position: absolute; inset: 0; z-index: 0;
-  pointer-events: none; overflow: visible;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: visible;
 }
 
 .ga-shape {
@@ -50,121 +64,179 @@
   pointer-events: none;
 }
 .ga-shape svg {
-  width: 100%; height: 100%;
+  width: 100%;
+  height: 100%;
   display: block;
   overflow: visible;
 }
 
 .ga-asterisk {
-  top: 100px; left: 16px;
-  width: 120px; height: 120px;
+  top: 100px;
+  left: 16px;
+  width: 120px;
+  height: 120px;
   opacity: 0.18;
   animation: ga-float 17s ease-in-out infinite;
 }
-.ga-asterisk svg { animation: ga-rotate 55s linear infinite; }
+.ga-asterisk svg {
+  animation: ga-rotate 55s linear infinite;
+}
 
 .ga-bloom {
-  top: 160px; right: 16px;
-  width: 140px; height: 140px;
+  top: 160px;
+  right: 16px;
+  width: 140px;
+  height: 140px;
   opacity: 0.16;
   animation: ga-float 19s ease-in-out infinite;
   animation-delay: -7s;
 }
-.ga-bloom svg { animation: ga-rotate-rev 60s linear infinite; animation-delay: -10s; }
+.ga-bloom svg {
+  animation: ga-rotate-rev 60s linear infinite;
+  animation-delay: -10s;
+}
 
 .ga-capsules {
-  top: 380px; left: 8px;
-  width: 160px; height: 100px;
+  top: 380px;
+  left: 8px;
+  width: 160px;
+  height: 100px;
   opacity: 0.15;
   animation: ga-float 15s ease-in-out infinite;
   animation-delay: -3s;
 }
-.ga-capsules svg { animation: ga-rotate 45s linear infinite; animation-delay: -20s; }
+.ga-capsules svg {
+  animation: ga-rotate 45s linear infinite;
+  animation-delay: -20s;
+}
 
 .ga-petals {
-  top: 520px; right: 12px;
-  width: 120px; height: 120px;
+  top: 520px;
+  right: 12px;
+  width: 120px;
+  height: 120px;
   opacity: 0.18;
   animation: ga-float 21s ease-in-out infinite;
   animation-delay: -5s;
 }
-.ga-petals svg { animation: ga-rotate 50s linear infinite; animation-delay: -5s; }
+.ga-petals svg {
+  animation: ga-rotate 50s linear infinite;
+  animation-delay: -5s;
+}
 
 .ga-soft-star {
-  top: 660px; left: 16px;
-  width: 100px; height: 100px;
+  top: 660px;
+  left: 16px;
+  width: 100px;
+  height: 100px;
   opacity: 0.16;
   animation: ga-float 18s ease-in-out infinite;
   animation-delay: -11s;
 }
-.ga-soft-star svg { animation: ga-rotate-rev 52s linear infinite; animation-delay: -30s; }
+.ga-soft-star svg {
+  animation: ga-rotate-rev 52s linear infinite;
+  animation-delay: -30s;
+}
 
 .ga-ring-cluster {
-  top: 760px; right: 14px;
-  width: 130px; height: 130px;
+  top: 760px;
+  right: 14px;
+  width: 130px;
+  height: 130px;
   opacity: 0.17;
   animation: ga-float 20s ease-in-out infinite;
   animation-delay: -2s;
 }
-.ga-ring-cluster svg { animation: ga-rotate 48s linear infinite; animation-delay: -15s; }
+.ga-ring-cluster svg {
+  animation: ga-rotate 48s linear infinite;
+  animation-delay: -15s;
+}
 
 .ga-ribbon {
-  top: 900px; left: 50%;
-  width: 200px; height: 80px;
+  top: 900px;
+  left: 50%;
+  width: 200px;
+  height: 80px;
   margin-left: -100px;
   opacity: 0.14;
   animation: ga-float 23s ease-in-out infinite;
   animation-delay: -14s;
 }
-.ga-ribbon svg { animation: ga-rotate 65s linear infinite; animation-delay: -25s; }
+.ga-ribbon svg {
+  animation: ga-rotate 65s linear infinite;
+  animation-delay: -25s;
+}
 
 .ga-overlap-rings {
-  top: 1000px; right: 16px;
-  width: 110px; height: 110px;
+  top: 1000px;
+  right: 16px;
+  width: 110px;
+  height: 110px;
   opacity: 0.17;
   animation: ga-float 16s ease-in-out infinite;
   animation-delay: -8s;
 }
-.ga-overlap-rings svg { animation: ga-rotate-rev 42s linear infinite; animation-delay: -35s; }
+.ga-overlap-rings svg {
+  animation: ga-rotate-rev 42s linear infinite;
+  animation-delay: -35s;
+}
 
 @media (min-width: 720px) {
   .ga-asterisk {
-    top: 5%; left: -90px;
-    width: 180px; height: 180px;
+    top: 5%;
+    left: -90px;
+    width: 180px;
+    height: 180px;
   }
   .ga-bloom {
-    top: 15%; right: -100px;
-    width: 220px; height: 220px;
+    top: 15%;
+    right: -100px;
+    width: 220px;
+    height: 220px;
   }
   .ga-capsules {
-    top: 36%; left: -110px;
-    width: 240px; height: 150px;
+    top: 36%;
+    left: -110px;
+    width: 240px;
+    height: 150px;
   }
   .ga-petals {
-    top: 53%; right: -80px;
-    width: 170px; height: 170px;
+    top: 53%;
+    right: -80px;
+    width: 170px;
+    height: 170px;
   }
   .ga-soft-star {
-    top: 68%; left: -70px;
-    width: 150px; height: 150px;
+    top: 68%;
+    left: -70px;
+    width: 150px;
+    height: 150px;
   }
   .ga-ring-cluster {
-    top: 74%; right: -90px;
-    width: 180px; height: 180px;
+    top: 74%;
+    right: -90px;
+    width: 180px;
+    height: 180px;
   }
   .ga-ribbon {
-    top: 86%; left: 50%;
-    width: 300px; height: 120px;
+    top: 86%;
+    left: 50%;
+    width: 300px;
+    height: 120px;
     margin-left: -150px;
   }
   .ga-overlap-rings {
-    top: 93%; right: -60px;
-    width: 150px; height: 150px;
+    top: 93%;
+    right: -60px;
+    width: 150px;
+    height: 150px;
   }
 }
 
 .orn-vguide {
-  position: absolute; top: 0; bottom: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 1px;
   z-index: 0;
 }
@@ -172,7 +244,10 @@
   left: 0;
 }
 .orn-vg-line {
-  position: absolute; top: 0; bottom: 0; left: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 1px;
   background: linear-gradient(
     to bottom,
@@ -184,16 +259,26 @@
   opacity: 0.3;
 }
 .orn-vg-tick {
-  position: absolute; left: -2px;
-  width: 5px; height: 1px;
+  position: absolute;
+  left: -2px;
+  width: 5px;
+  height: 1px;
   background: var(--color-rule);
   opacity: 0.35;
 }
-.orn-vg-tick--t { top: 15%; }
-.orn-vg-tick--m { top: 50%; }
-.orn-vg-tick--b { top: 85%; }
+.orn-vg-tick--t {
+  top: 15%;
+}
+.orn-vg-tick--m {
+  top: 50%;
+}
+.orn-vg-tick--b {
+  top: 85%;
+}
 .orn-vg-label {
-  position: absolute; bottom: -20px; left: 4px;
+  position: absolute;
+  bottom: -20px;
+  left: 4px;
   font-family: var(--font-mono);
   font-size: 8px;
   letter-spacing: 0.12em;
@@ -210,31 +295,44 @@
   z-index: 0;
 }
 .orn-big-ring--top {
-  width: 140px; height: 140px;
-  top: -60px; right: -40px;
+  width: 140px;
+  height: 140px;
+  top: -60px;
+  right: -40px;
 }
 .orn-big-ring--bot {
-  width: 100px; height: 100px;
-  bottom: -40px; left: -20px;
+  width: 100px;
+  height: 100px;
+  bottom: -40px;
+  left: -20px;
   opacity: 0.2;
 }
 
 .orn-wide-rule {
-  position: absolute; left: -60px; right: -60px;
-  display: flex; align-items: center;
+  position: absolute;
+  left: -60px;
+  right: -60px;
+  display: flex;
+  align-items: center;
   height: 1px;
   z-index: 0;
 }
-.orn-wide-rule--1 { top: 38%; }
-.orn-wide-rule--2 { top: 78%; }
+.orn-wide-rule--1 {
+  top: 38%;
+}
+.orn-wide-rule--2 {
+  top: 78%;
+}
 
 .orn-wr-line {
-  flex: 1; height: 1px;
+  flex: 1;
+  height: 1px;
   background: var(--color-rule);
   opacity: 0.28;
 }
 .orn-wr-dot {
-  width: 5px; height: 5px;
+  width: 5px;
+  height: 5px;
   background: var(--color-accent);
   border-radius: 50%;
   opacity: 0.35;
@@ -259,7 +357,8 @@
 .orn-cluster--mods {
   top: 55%;
   right: -30px;
-  width: 60px; height: 60px;
+  width: 60px;
+  height: 60px;
 }
 .orn-c-circle {
   position: absolute;
@@ -267,19 +366,24 @@
   border-radius: 50%;
 }
 .orn-c-circle--a {
-  width: 36px; height: 36px;
-  top: 0; left: 0;
+  width: 36px;
+  height: 36px;
+  top: 0;
+  left: 0;
   opacity: 0.28;
 }
 .orn-c-circle--b {
-  width: 20px; height: 20px;
-  bottom: 4px; right: 4px;
+  width: 20px;
+  height: 20px;
+  bottom: 4px;
+  right: 4px;
   opacity: 0.22;
   border-style: dashed;
 }
 .orn-c-cross {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -55%);
   font-family: var(--font-mono);
   font-size: 10px;
@@ -290,7 +394,8 @@
 
 .orn-diag {
   position: absolute;
-  top: 65%; bottom: 10%;
+  top: 65%;
+  bottom: 10%;
   left: -40px;
   width: 1px;
   z-index: 0;
@@ -299,7 +404,10 @@
   opacity: 0.2;
 }
 .orn-diag-line {
-  position: absolute; top: 0; bottom: 0; left: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 1px;
   background: linear-gradient(
     to bottom,
@@ -310,11 +418,17 @@
   );
 }
 .orn-diag-dot {
-  position: absolute; left: -2px;
-  width: 5px; height: 5px;
+  position: absolute;
+  left: -2px;
+  width: 5px;
+  height: 5px;
   background: var(--color-rule);
   border-radius: 50%;
   opacity: 0.35;
 }
-.orn-diag-dot--1 { top: 20%; }
-.orn-diag-dot--2 { bottom: 15%; }
+.orn-diag-dot--1 {
+  top: 20%;
+}
+.orn-diag-dot--2 {
+  bottom: 15%;
+}

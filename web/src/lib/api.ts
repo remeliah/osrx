@@ -20,16 +20,16 @@ export async function parseReplay(file: File): Promise<ReplayDto> {
  */
 export async function writeReplay(dto: ReplayDto, filename: string): Promise<void> {
   const res = await fetch(`${BASE}/write`, {
-    method:  'POST',
+    method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body:    JSON.stringify(dto),
+    body: JSON.stringify(dto),
   });
   if (!res.ok) throw new Error(await res.text());
 
   const blob = await res.blob();
-  const url  = URL.createObjectURL(blob);
-  const a    = Object.assign(document.createElement('a'), {
-    href:     url,
+  const url = URL.createObjectURL(blob);
+  const a = Object.assign(document.createElement('a'), {
+    href: url,
     download: filename.endsWith('.osr') ? filename : `${filename}.osr`,
   });
   document.body.appendChild(a);

@@ -1,20 +1,26 @@
 @import '../tokens.css';
 
-html { overflow-x: clip; }
-body { overflow-x: clip; }
+html {
+  overflow-x: clip;
+}
+body {
+  overflow-x: clip;
+}
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 html {
-  font-family:     var(--font-body);
-  font-size:       16px;
-  line-height:     1.6;
-  color:           var(--color-ink);
-  background:      var(--color-paper);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-ink);
+  background: var(--color-paper);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -29,7 +35,9 @@ body::before {
   mix-blend-mode: multiply;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   font-weight: 400;
   line-height: 1.1;
@@ -41,7 +49,9 @@ h1, h2, h3 {
   outline-offset: 2px;
   border-radius: var(--radius-sm);
 }
-:focus:not(:focus-visible) { outline: none; }
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .reveal {
   opacity: 0;
@@ -51,27 +61,47 @@ h1, h2, h3 {
 }
 
 @keyframes reveal {
-  to { opacity: 1; transform: none; }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration:  150ms !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 150ms !important;
     transition-duration: 150ms !important;
   }
-  .reveal { animation: reveal-a11y 150ms linear forwards; }
-  @keyframes reveal-a11y { to { opacity: 1; transform: none; } }
+  .reveal {
+    animation: reveal-a11y 150ms linear forwards;
+  }
+  @keyframes reveal-a11y {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 }
 
 .mono {
   font-family: var(--font-mono);
-  font-size:   var(--text-sm);
+  font-size: var(--text-sm);
   font-variant-numeric: tabular-nums;
 }
 
-.muted { color: var(--color-neutral); }
+.muted {
+  color: var(--color-neutral);
+}
 .sr-only {
-  position: absolute; width: 1px; height: 1px;
-  padding: 0; margin: -1px; overflow: hidden;
-  clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

@@ -17,12 +17,10 @@ export const ease = {
 export function animatePageEntrance() {
   const tl = gsap.timeline({ defaults: { ease: ease.expo } });
 
-  tl.fromTo('.nav',
-    { y: -20, opacity: 0 },
-    { y: 0, opacity: 1, duration: 0.8, ease: ease.power4 }
-  );
+  tl.fromTo('.nav', { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: ease.power4 });
 
-  tl.fromTo('[data-reveal]',
+  tl.fromTo(
+    '[data-reveal]',
     { y: 40, opacity: 0, scale: 0.95, rotateX: 5 },
     {
       y: 0,
@@ -33,9 +31,9 @@ export function animatePageEntrance() {
       stagger: {
         amount: 0.6,
         from: 'start',
-        ease: ease.power3
+        ease: ease.power3,
       },
-      ease: ease.expo
+      ease: ease.expo,
     },
     '-=0.4'
   );
@@ -84,11 +82,7 @@ export function magneticEffect(element: HTMLElement, strength = 0.3) {
   };
 }
 
-export function animateNumber(
-  element: HTMLElement,
-  target: number,
-  duration = 1.2
-) {
+export function animateNumber(element: HTMLElement, target: number, duration = 1.2) {
   const obj = { value: parseFloat(element.textContent || '0') };
 
   return gsap.to(obj, {
@@ -118,11 +112,7 @@ export function shimmerPill(element: HTMLElement) {
 
   const shimmer = element.querySelector('.shimmer-overlay');
   if (shimmer) {
-    tl.fromTo(shimmer,
-      { x: '-100%' },
-      { x: '100%', duration: 0.6, ease: ease.power3 },
-      '-=0.3'
-    );
+    tl.fromTo(shimmer, { x: '-100%' }, { x: '100%', duration: 0.6, ease: ease.power3 }, '-=0.3');
   }
 
   return tl;
@@ -218,8 +208,7 @@ export function buttonPress(element: HTMLElement) {
     scale: 0.92,
     duration: 0.1,
     ease: ease.power3,
-  })
-  .to(element, {
+  }).to(element, {
     scale: 1,
     duration: 0.3,
     ease: ease.back,
@@ -231,7 +220,8 @@ export function buttonPress(element: HTMLElement) {
 export function staggerPills(container: HTMLElement) {
   const pills = container.querySelectorAll('[data-pill]');
 
-  return gsap.fromTo(pills,
+  return gsap.fromTo(
+    pills,
     { scale: 0, opacity: 0, rotateZ: -10 },
     {
       scale: 1,

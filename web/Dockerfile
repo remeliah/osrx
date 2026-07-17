@@ -1,17 +1,17 @@
-FROM node:22-alpine AS builder
+FROM oven/bun:1-alpine AS builder
 
 WORKDIR /app
 
 COPY web/ ./
-RUN npm ci && npm run build
+RUN bun install && bun run build
 
-FROM node:22-alpine
+FROM oven/bun:1-alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/package.json /app/package-lock.json ./
+COPY --from=builder /app/package.json /app/bun.lock ./
 
-RUN npm ci --omit=dev
+RUN bun install --production
 COPY --from=builder /app/build ./build
 
-CMD ["node", "build"]
+CMD ["bun", "build/index.js"]

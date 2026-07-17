@@ -37,22 +37,44 @@
   <svg class="drop-art" viewBox="0 0 160 120" fill="none" aria-hidden="true">
     <path
       d="M48 32 L48 72 L58 62 L66 80 L72 77 L64 59 L76 58 Z"
-      stroke="currentColor" stroke-width="1.5"
-      stroke-linejoin="round" stroke-linecap="round"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linejoin="round"
+      stroke-linecap="round"
       fill="none"
     />
-    <circle cx="90"  cy="46"  r="2"   fill="currentColor" opacity="0.55"/>
-    <circle cx="100" cy="40"  r="1.5" fill="currentColor" opacity="0.40"/>
-    <circle cx="111" cy="35"  r="1"   fill="currentColor" opacity="0.28"/>
-    <circle cx="120" cy="32"  r="0.8" fill="currentColor" opacity="0.18"/>
-    <circle cx="108" cy="80" r="18" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
-    <circle cx="108" cy="80" r="14" stroke="currentColor" stroke-width="1"   opacity="0.18"/>
-    <circle cx="108" cy="80" r="26" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 4" opacity="0.18"/>
-    <line x1="20" y1="100" x2="140" y2="100" stroke="currentColor" stroke-width="0.75" opacity="0.15"/>
+    <circle cx="90" cy="46" r="2" fill="currentColor" opacity="0.55" />
+    <circle cx="100" cy="40" r="1.5" fill="currentColor" opacity="0.40" />
+    <circle cx="111" cy="35" r="1" fill="currentColor" opacity="0.28" />
+    <circle cx="120" cy="32" r="0.8" fill="currentColor" opacity="0.18" />
+    <circle cx="108" cy="80" r="18" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+    <circle cx="108" cy="80" r="14" stroke="currentColor" stroke-width="1" opacity="0.18" />
+    <circle
+      cx="108"
+      cy="80"
+      r="26"
+      stroke="currentColor"
+      stroke-width="0.8"
+      stroke-dasharray="3 4"
+      opacity="0.18"
+    />
+    <line
+      x1="20"
+      y1="100"
+      x2="140"
+      y2="100"
+      stroke="currentColor"
+      stroke-width="0.75"
+      opacity="0.15"
+    />
     <polyline
       points="20,100 38,95 55,97 72,91 88,96 105,88 122,93 140,85"
-      stroke="currentColor" stroke-width="1.25" opacity="0.35"
-      fill="none" stroke-linecap="round" stroke-linejoin="round"
+      stroke="currentColor"
+      stroke-width="1.25"
+      opacity="0.35"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </svg>
 
@@ -73,22 +95,22 @@
 
 <style>
   .drop-zone {
-    display:         flex;
-    flex-direction:  column;
-    align-items:     center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap:             var(--space-xl);
-    min-height:      420px;
-    border:          1px dashed var(--color-rule);
-    border-radius:   var(--radius-lg);
-    cursor:          pointer;
+    gap: var(--space-xl);
+    min-height: 420px;
+    border: 1px dashed var(--color-rule);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
     transition:
       border-color var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1),
-      background   var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1),
-      box-shadow   var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1);
-    padding:         var(--space-3xl) var(--space-xl);
-    position:        relative;
-    overflow:        hidden;
+      background var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1);
+    padding: var(--space-3xl) var(--space-xl);
+    position: relative;
+    overflow: hidden;
     --mx: 50%;
     --my: 50%;
   }
@@ -116,13 +138,13 @@
   .drop-zone:hover,
   .drop-zone:focus-visible {
     border-color: var(--color-accent-dim);
-    background:   oklch(97.5% 0.008 60);
+    background: oklch(97.5% 0.008 60);
     box-shadow: 0 2px 16px oklch(0% 0 0 / 0.04);
   }
 
   .drop-zone.dragging {
     border-color: var(--color-accent);
-    background:   oklch(96% 0.016 50);
+    background: oklch(96% 0.016 50);
     border-style: solid;
     box-shadow: 0 4px 24px oklch(0% 0 0 / 0.08);
   }
@@ -131,17 +153,22 @@
   }
 
   .drop-art {
-    width:   160px;
-    height:  120px;
-    color:   var(--color-neutral);
+    width: 160px;
+    height: 120px;
+    color: var(--color-neutral);
     transition: all var(--dur-short) cubic-bezier(0.16, 1, 0.3, 1);
     flex-shrink: 0;
     animation: float 5s ease-in-out infinite;
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-8px); }
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
   }
 
   .drop-zone:hover .drop-art {
@@ -155,24 +182,24 @@
   }
 
   .drop-text {
-    display:        flex;
+    display: flex;
     flex-direction: column;
-    align-items:    center;
-    gap:            var(--space-xs);
-    text-align:     center;
+    align-items: center;
+    gap: var(--space-xs);
+    text-align: center;
   }
 
   .drop-primary {
     font-family: var(--font-display);
-    font-size:   var(--text-xl);
-    color:       var(--color-ink);
-    font-style:  italic;
+    font-size: var(--text-xl);
+    color: var(--color-ink);
+    font-style: italic;
     letter-spacing: -0.01em;
   }
 
   .drop-secondary {
     font-size: var(--text-sm);
-    color:     var(--color-neutral);
+    color: var(--color-neutral);
     font-family: var(--font-mono);
   }
 </style>

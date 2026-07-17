@@ -35,7 +35,7 @@ the app will be available at `http://localhost:9082`.
 
 ## development
 
-requires rust and node.js 22+.
+requires rust and [bun](https://bun.sh) 1.3+.
 
 ```sh
 # start API + frontend dev servers
@@ -43,7 +43,14 @@ make dev
 
 # or run them separately:
 cargo run -p osrx-api          # API on :3001
-cd web && npm run dev          # web on :3000 (proxies /api to :3001)
+cd web && bun run dev          # web on :3000 (proxies /api to :3001)
+```
+
+formatting:
+
+```sh
+cd web && bun run format       # prettier
+cd web && bun run format:check # check only
 ```
 
 ## architecture
@@ -52,7 +59,7 @@ cd web && npm run dev          # web on :3000 (proxies /api to :3001)
 graph LR
     browser[browser] --> nginx[nginx]
     nginx --> |/api/*| api[api<br/>rust/Axum]
-    nginx --> |/*| web[web<br/>sveltekit/Node]
+    nginx --> |/*| web[web<br/>sveltekit/Bun]
 ```
 
 the rust API uses [`osr-rs`](https://crates.io/crates/osr-rs) to parse and serialize `.osr` binaries. the frontend is a Svelte 5 app that talks to two endpoints:
